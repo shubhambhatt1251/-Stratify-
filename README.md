@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://stratify-ai.vercel.app/placeholder.svg" alt="Stratify AI Logo" width="120"/>
+  <img src="https://stratify-ai.vercel.app/placeholder.svg" alt="" width="120"/>
   
   <h1>🚀 STRATIFY AI</h1>
   <h3><em>Where Strategy Meets Intelligence</em></h3>
