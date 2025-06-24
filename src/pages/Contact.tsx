@@ -69,10 +69,9 @@ const Contact = () => {
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Call Us",
+      icon: <Phone className="h-6 w-6" />,      title: "Call Us",
       description: "Speak with our team",
-      value: "+91 (11) 4567-8900",
+      value: "+91 11 4567 8900",
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -145,7 +144,7 @@ const Contact = () => {
               Success Together
             </span>
           </motion.h1>
-          
+
           <motion.p 
             variants={staggerItem}
             className="text-body text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
