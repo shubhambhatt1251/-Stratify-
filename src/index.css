@@ -40,6 +40,18 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
+
+  /* Add a uniform-box utility for consistent box sizing */
+  .uniform-box {
+    min-height: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
 }
 
 @layer utilities {

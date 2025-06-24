@@ -259,60 +259,6 @@ const Features = () => {
           </motion.div>
         </section>
 
-        {/* Main Features Section */}
-        <section className="section-spacing bg-gradient-to-r from-green-900/10 to-black/30">
-          <motion.div 
-            className="container-custom"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <motion.div className="text-center mb-12 sm:mb-16" variants={staggerItem}>
-              <Badge className="bg-green-500/20 text-green-300 border-green-500/30 mb-6 sm:mb-8 px-4 sm:px-6 py-2 text-sm sm:text-base glass-ultra">
-                <Star className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                Core Technology
-              </Badge>
-              <h2 className="text-section-title font-bold text-white mb-6 sm:mb-8">
-                AI-Powered Features &
-                <br />
-                <span className="text-gradient text-shimmer">
-                  Capabilities
-                </span>
-              </h2>
-            </motion.div>
-
-            <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12" variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: true }}>
-              {mainFeatures.map((feature, index) => (
-                <motion.div key={index} variants={staggerItem}>
-                  <Card className="group glass-card rounded-2xl overflow-hidden shadow-2xl border-green-500/20">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-5 group-hover:opacity-10 transition-all duration-500`}></div>
-                    <CardContent className="p-6 sm:p-8 relative z-10">
-                      <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                        <div className={`w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white shadow-2xl transition-all duration-500 mx-auto sm:mx-0`}>
-                          <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
-                        </div>
-                        <div className="flex-1 text-center sm:text-left">
-                          <h3 className="text-card-title sm:text-section-title font-bold text-white mb-3 sm:mb-4">{feature.title}</h3>
-                          <p className="text-small sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-6">{feature.description}</p>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 sm:mb-6">
-                            {feature.features.map((item, itemIndex) => (
-                              <div key={itemIndex} className="flex items-center space-x-3 justify-center sm:justify-start">
-                                <CheckCircle className="h-4 w-4 text-green-400" />
-                                <span className="text-gray-300 text-xs sm:text-sm">{item}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </section>
-
         {/* AI Features */}
         <section className="section-spacing">
           <motion.div 

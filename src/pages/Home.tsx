@@ -242,9 +242,9 @@ const Home = () => {
                 key={feature.title}
                 variants={staggerItem}
               >
-                <Card className="glass-ultra rounded-2xl overflow-hidden hover-lift interactive-card group">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-r from-black/50 to-green-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Card className="glass-ultra uniform-box h-[260px] flex flex-col justify-center items-center rounded-2xl overflow-hidden hover-lift interactive-card group">
+                  <CardContent className="p-6 text-center flex flex-col h-full justify-center items-center">
+                    <div className="w-12 h-12 mb-4 rounded-xl bg-gradient-to-r from-black/50 to-green-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
                     <div className="text-2xl font-bold text-gradient mb-2 group-hover:scale-105 transition-transform duration-300">
@@ -283,13 +283,15 @@ const Home = () => {
                 key={feature.title}
                 variants={staggerItem}
               >
-                <Card className={`glass-card rounded-2xl overflow-hidden hover-lift group bg-gradient-to-br ${feature.gradient}`}>
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-r from-black/50 to-green-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Card className="glass-card uniform-box h-[320px] flex flex-col justify-center items-center rounded-2xl overflow-hidden hover-lift group bg-gradient-to-br from-black/40 to-emerald-900/20">
+                  <CardContent className="p-6 text-center flex flex-col h-full justify-center items-center">
+                    <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-r from-black/50 to-green-900/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
-                    <h3 className="text-card-title font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-small text-gray-300 leading-relaxed">{feature.description}</p>
+                    <div className="flex-1 flex flex-col justify-center">
+                      <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                      <p className="text-base text-gray-300 leading-relaxed">{feature.description}</p>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -319,16 +321,20 @@ const Home = () => {
                 className="text-center group hover-lift"
                 variants={staggerItem}
               >
-                <Card className="glass-ultra rounded-2xl p-6 interactive-card">
-                  <CardContent className="p-0">
-                    <div className="w-12 h-12 mx-auto mb-4 glass-card rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      {stat.icon}
+                <Card className="glass-ultra uniform-box h-[240px] flex flex-col justify-center items-center rounded-2xl p-6 interactive-card">
+                  <CardContent className="p-0 flex flex-col h-full justify-between items-center">
+                    <div>
+                      <div className="w-16 h-16 mb-6 glass-card rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        {stat.icon}
+                      </div>
+                      <div className="text-4xl font-bold text-gradient mb-3 group-hover:scale-105 transition-transform duration-300">
+                        {stat.number}
+                      </div>
                     </div>
-                    <div className="text-3xl font-bold text-gradient mb-2 group-hover:scale-105 transition-transform duration-300">
-                      {stat.number}
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-2">{stat.label}</h4>
+                      <p className="text-base text-gray-300">{stat.description}</p>
                     </div>
-                    <h4 className="text-card-title font-bold text-white mb-1">{stat.label}</h4>
-                    <p className="text-small text-gray-300">{stat.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
