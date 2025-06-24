@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Brain, Rocket, Target, Users, TrendingUp, Lightbulb, ArrowRight, CheckCircle, Zap, Clock, Shield, Database, BarChart3, Activity, Sparkles, Calendar, Network } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export interface StartupFormData {
   startupName: string;
@@ -23,6 +23,7 @@ export interface StartupFormData {
 }
 
 const Strategy = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState<StartupFormData | null>(null);
   const [showResults, setShowResults] = useState(false);
 
@@ -46,6 +47,15 @@ const Strategy = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (location.hash === '#strategy-form') {
+      const el = document.getElementById('strategy-form');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   const handleFormSubmit = (data: StartupFormData) => {
     console.log('Form submitted with data:', data);
@@ -156,15 +166,16 @@ const Strategy = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 scroll-reveal">
-            <Button 
-              onClick={() => document.getElementById('strategy-form')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl hover-lift group"
-            >
-              <span className="flex items-center">
-                Start Strategy Analysis
-                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Button>
+            <Link to="/strategy#strategy-form">
+              <Button 
+                className="btn-primary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl hover-lift group"
+              >
+                <span className="flex items-center">
+                  Start Strategy Analysis
+                  <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
+            </Link>
             <Link to="/features">
               <Button className="btn-secondary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-2xl hover-lift">
                 <Activity className="mr-3 h-5 w-5" />
@@ -221,6 +232,11 @@ const Strategy = () => {
                   </div>
                   <h3 className="text-card-title font-bold text-white mb-3 sm:mb-4">{step.title}</h3>
                   <p className="text-small text-gray-300 leading-relaxed">{step.description}</p>
+                  <a href="#strategy-form">
+                    <Button className="mt-4 btn-primary px-6 py-2 text-sm font-semibold rounded-xl hover-lift">
+                      Start Now
+                    </Button>
+                  </a>
                   {index < processSteps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
                       <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 text-green-400/50" />
@@ -267,7 +283,7 @@ const Strategy = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <Link to="/contact">
+              <Link to="/contact#contact-form">
                 <Button className="btn-primary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-2xl hover-lift group">
                   <span className="flex items-center">
                     Contact Support
@@ -275,10 +291,12 @@ const Strategy = () => {
                   </span>
                 </Button>
               </Link>
-              <Button className="btn-secondary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-2xl hover-lift">
-                <Calendar className="mr-3 h-5 w-5" />
-                Schedule Call
-              </Button>
+              <Link to="/contact#contact-form">
+                <Button className="btn-secondary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-2xl hover-lift">
+                  <Calendar className="mr-3 h-5 w-5" />
+                  Schedule Call
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

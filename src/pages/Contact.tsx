@@ -18,6 +18,7 @@ import {
   Star
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const staggerItem = {
   hidden: { opacity: 0, y: 20 },
@@ -192,6 +193,7 @@ const Contact = () => {
 
       {/* Contact Form & Features */}
       <motion.section 
+        id="contact-form"
         className="py-24 bg-gradient-to-tr from-black/50 via-green-900/10 to-black/50"
         variants={staggerContainer}
         initial="hidden"
@@ -274,15 +276,17 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <Button 
-                      type="submit" 
-                      className="w-full btn-primary py-4 text-lg font-bold rounded-2xl hover-lift group"
-                    >
-                      <span className="flex items-center justify-center">
-                        Send Message
-                        <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                      </span>
-                    </Button>
+                    <Link to="/">
+                      <Button 
+                        type="submit" 
+                        className="w-full btn-primary py-4 text-lg font-bold rounded-2xl hover-lift group"
+                      >
+                        <span className="flex items-center justify-center">
+                          Send Message
+                          <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Button>
+                    </Link>
                   </form>
                 </CardContent>
               </Card>

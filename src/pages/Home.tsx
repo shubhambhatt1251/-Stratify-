@@ -179,7 +179,7 @@ const Home = () => {
             variants={staggerItem}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
-            <Link to="/strategy">
+            <Link to="/strategy#strategy-form">
               <Button className="btn-primary px-8 py-3 text-lg font-bold rounded-xl hover-lift group hover-target">
                 <span className="flex items-center">
                   Start AI Analysis
@@ -408,7 +408,7 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/strategy">
+              <Link to="/strategy#strategy-form">
                 <Button className="btn-primary px-8 py-3 text-lg font-bold rounded-xl hover-lift group hover-target">
                   <span className="flex items-center">
                     Get Started Now
@@ -416,7 +416,7 @@ const Home = () => {
                   </span>
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact#contact-form">
                 <Button className="btn-secondary px-8 py-3 text-lg font-semibold rounded-xl hover-lift hover-target">
                   <Calendar className="mr-2 h-5 w-5" />
                   Contact Sales

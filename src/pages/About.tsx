@@ -164,7 +164,7 @@ const About = () => {
                 personalized recommendations that would typically cost thousands of dollars 
                 and take weeks to develop.
               </p>
-              <Link to="/strategy">
+              <Link to="/">
                 <Button className="btn-primary px-8 py-3 rounded-xl hover-lift group">
                   <span className="flex items-center">
                     Experience Our Platform
@@ -301,7 +301,7 @@ const About = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/strategy">
+              <Link to="/">
                 <Button className="btn-primary px-8 py-3 text-lg font-bold rounded-xl hover-lift group">
                   <span className="flex items-center">
                     Get Your Strategy
@@ -309,7 +309,7 @@ const About = () => {
                   </span>
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact#contact-form">
                 <Button className="btn-secondary px-8 py-3 text-lg font-semibold rounded-xl hover-lift glass-card">
                   <Users className="mr-2 h-5 w-5" />
                   Contact Our Team

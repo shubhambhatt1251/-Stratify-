@@ -163,7 +163,7 @@ const Features = () => {
             variants={staggerItem}
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
           >
-            <Link to="/strategy">
+            <Link to="/">
               <Button className="btn-primary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl hover-lift group">
                 <span className="flex items-center">
                   Start Analysis Now
@@ -171,7 +171,7 @@ const Features = () => {
                 </span>
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/">
               <Button className="btn-secondary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl hover-lift">
                 <Eye className="mr-3 h-5 w-5" />
                 Learn More
@@ -315,7 +315,7 @@ const Features = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-                <Link to="/strategy">
+                <Link to="/">
                   <Button className="btn-primary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl hover-lift group">
                     <span className="flex items-center">
                       Start Your Journey
@@ -323,7 +323,7 @@ const Features = () => {
                     </span>
                   </Button>
                 </Link>
-                <Link to="/contact">
+                <Link to="/">
                   <Button className="btn-secondary px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl hover-lift">
                     <Calendar className="mr-3 h-5 w-5" />
                     Get Support
